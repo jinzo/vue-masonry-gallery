@@ -51,7 +51,7 @@
       }
     }
     a.img-wraper {
-      background: url(../../static/img/broken-img.svg);
+      //background: url(../../static/img/broken-img.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: 44%;
