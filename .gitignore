@@ -4,6 +4,7 @@ npm-debug.log*
 yarn-error.log*
 /test/e2e/reports/
 selenium-debug.log
+dist/
 # Editor directories and files
 .idea
 .vscode

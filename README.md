@@ -14,11 +14,15 @@ npm install
 # serve with hot reload at http://localhost:8888
 npm run dev
 
-# build for production with minification /dist/ directory
+# NOT WORKING CURRENTLY: build for production with minification /dist/ directory
 npm run build
 
-# build for production and view the bundle analyzer report
+# NOT WORKING CURRENTLY: build for production and view the bundle analyzer report
 npm run build --report
+
+# Build vendor/ files
+npm run pack
+
 ```
 
 ## 1. Usage
