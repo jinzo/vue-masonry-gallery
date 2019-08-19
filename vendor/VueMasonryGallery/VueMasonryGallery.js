@@ -677,9 +677,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
-//
-//
 
 
 
@@ -1367,8 +1364,8 @@ var render = function() {
                                   _c("img", {
                                     attrs: {
                                       src: v[_vm.srcKey],
-                                      title: v[_vm.title],
-                                      alt: v[_vm.alt]
+                                      title: v["title"],
+                                      alt: v["alt"]
                                     }
                                   })
                                 ]
@@ -1387,17 +1384,7 @@ var render = function() {
           )
         ],
         2
-      ),
-      _c("div", { attrs: { id: "footer" } }, [
-        _vm.currentlyVisible < _vm.imgsArr_c.length
-          ? _c(
-              "button",
-              { staticClass: "loadMore", on: { click: _vm.loadMore } },
-              [_vm._v("Load more items")]
-            )
-          : _vm._e(),
-        _c("p", { staticClass: "copyright" }, [_vm._v("VajraCode 2018")])
-      ])
+      )
     ]
   )
 }

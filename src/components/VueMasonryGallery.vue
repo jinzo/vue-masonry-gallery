@@ -158,11 +158,8 @@
             :is="isRouterLink && linkRange=='img' ? 'router-link' :'alink'",
             :to="linkRange=='img' ? v[hrefKey] : false ",
             :style="{width:imgWidth_c + 'px',height:v._height ? v._height+'px':false}")
-            img(:src="v[srcKey]" :title="v[title]" :alt="v[alt]")
+            img(:src="v[srcKey]" :title="v['title']" :alt="v['alt']")
           slot(:index="i",:value="v")
-  #footer
-    button.loadMore(@click="loadMore" v-if="currentlyVisible<imgsArr_c.length") Load more items
-    p.copyright VajraCode 2018
 </template>
 
 <!-- ——————————————↓JS———————————————————————— -->

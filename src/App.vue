@@ -4,10 +4,6 @@
     <div class="header-block">
     a(href="https://www.vajracode.com",target="_blank",title="VajraCode")
       img.vajralogo(src="../static/img/vajracode-logo.png")
-    a.github(href="https://github.com/parys-github/vue-masonry-gallery",target="_blank",title="GitHub")
-      img.ghlogo(src="../static/img/github-icon.svg")
-    a.npm(href="https://www.npmjs.com/~vajracode",target="_blank",title="NPMjs")
-      img.npmlogo(src="../static/img/npm-logo.svg")
     img.npm-code(src="../static/img/vue-masonry-gallery.png")
     </div>
   #content
