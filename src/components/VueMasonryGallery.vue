@@ -142,7 +142,10 @@
   //- In order to prevent loading from following the scroll
   .vue-masonry-gallery-scroll(ref="scrollEl")
     slot(name="masonry-head")
-    .vue-masonry-gallery(:style="isMobile? '' :{width: colWidth*cols+'px',left:'50%', marginLeft: -1*colWidth*cols/2 +'px'}")
+    .vue-masonry-gallery(
+      :style="isMobile? '' :{width: colWidth*cols+'px',left:'50%', marginLeft: -1*colWidth*cols/2 +'px'}"
+      v-images-loaded:on.progress="imageProgress"
+      )
       .img-box(
         v-for="(v,i) in imgsArr_c",
         v-if="i < currentlyVisible"
@@ -164,12 +167,14 @@
 
 <!-- ——————————————↓JS———————————————————————— -->
 <script>
-import alink from "./alink.vue";
+import alink from "./alink.vue"
+import imagesLoaded from 'vue-images-loaded'
 
 export default {
   name: "vue-masonry-gallery",
   components: {
-    alink
+    alink,
+    imagesLoaded
   },
   props: {
     width: {
@@ -419,6 +424,12 @@ export default {
         // console.log('scrollReachBottom')
         this.$emit("scrollReachBottom"); // Scrolling bottom
       }
+    },
+    // Redraw the layout after image loads
+    imageProgress(instance, image) {
+      this.$nextTick(() => {
+        this.waterfall();
+      });
     },
     // Load more images (next page)
     loadMore() {

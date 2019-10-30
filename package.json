@@ -76,6 +76,7 @@
   ],
   "dependencies": {
     "ajv": "^6.10.2",
+    "vue-images-loaded": "^1.1.2",
     "vue-loader": "^15.7.1",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
