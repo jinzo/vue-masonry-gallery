@@ -427,9 +427,8 @@ export default {
     },
     // Redraw the layout after image loads
     imageProgress(instance, image) {
-      this.$nextTick(() => {
-        this.waterfall();
-      });
+      console.log('imageProgress - ', image);
+      this.waterfall();
     },
     // Load more images (next page)
     loadMore() {
